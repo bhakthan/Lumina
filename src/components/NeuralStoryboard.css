@@ -1,0 +1,191 @@
+.storyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.storyboard-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.storyboard-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.timeline-section,
+.audio-section {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.timeline-section h3,
+.audio-section h3 {
+    color: var(--accent-cyan);
+    border-bottom: 1px solid var(--border-glass);
+    padding-bottom: 1rem;
+}
+
+.timeline-track {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    min-height: 200px;
+    border: 1px solid var(--border-glass);
+}
+
+.timeline-item {
+    position: relative;
+    flex-shrink: 0;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    transition: var(--transition-normal);
+}
+
+.timeline-item.video {
+    width: 200px;
+    height: 120px;
+    border: 2px solid transparent;
+    cursor: grab;
+}
+
+.timeline-item.video:hover {
+    border-color: var(--accent-magenta);
+}
+
+.timeline-item.video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.duration {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.timeline-item.transition {
+    width: auto;
+    z-index: 2;
+    margin: 0 -1rem;
+}
+
+.transition-badge {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.timeline-item.empty {
+    width: 200px;
+    height: 120px;
+    border: 2px dashed var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.timeline-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play-btn {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.play-btn:hover {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.script-textarea {
+    min-height: 100px;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.voice-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.mini-select {
+    width: 300px;
+}
+
+.generate-vo-btn {
+    background: transparent;
+    border: 1px solid var(--accent-purple);
+    color: var(--text-primary);
+}
+
+.generate-vo-btn:hover {
+    background: rgba(139, 92, 246, 0.2);
+}
+
+.play-icon-hover:hover {
+    transform: scale(1.1);
+    color: var(--accent-magenta) !important;
+}
+
+.final-commercial-player.playing {
+    animation: slowZoom 20s linear forwards;
+}
+
+@keyframes slowZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+.rec-dot {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}

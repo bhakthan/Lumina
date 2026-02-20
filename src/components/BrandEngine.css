@@ -1,0 +1,149 @@
+.brand-engine-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.brand-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.brand-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.brand-section {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.brand-section h3 {
+    color: var(--accent-magenta);
+    border-bottom: 1px solid var(--border-glass);
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.logo-upload {
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-md);
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.2);
+    transition: var(--transition-fast);
+}
+
+.logo-upload:hover {
+    border-color: var(--accent-cyan);
+    background: rgba(0, 240, 255, 0.05);
+}
+
+.logo-upload .upload-icon {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+}
+
+.color-palette {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.color-swatch {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    border: 2px solid transparent;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+    border-color: white;
+}
+
+.hex-code {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: var(--transition-fast);
+}
+
+.color-swatch:hover .hex-code {
+    opacity: 1;
+}
+
+.add-swatch {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed var(--border-glass);
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    box-shadow: none;
+}
+
+.add-swatch:hover {
+    border-color: var(--accent-cyan);
+    color: var(--text-primary);
+}
+
+.archetype-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.archetype-btn {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-glass);
+    color: var(--text-muted);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    font-size: 1rem;
+}
+
+.archetype-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.archetype-btn.active {
+    background: rgba(255, 0, 60, 0.15);
+    border-color: var(--accent-magenta);
+    color: var(--text-primary);
+    box-shadow: inset 0 0 10px rgba(255, 0, 60, 0.2);
+}
+
+.brand-context {
+    min-height: 150px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.save-brand-btn {
+    margin-top: auto;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+}
